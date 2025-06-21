@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #010232;
+}
+.container{
+    position: relative;
+    width: 380px;
+    height: 450px;
+    background: #000162;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, #5f61e6, #5f61e6, #5d61e6);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.container::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, #5f61e6, #5f61e6, #5d61e6);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.border-line{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, #5f61e6, #5f61e6, #5d61e6);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.border-line::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, #ff5ec8, #ff5ec8, #ff5ec8);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.border-line::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, #ff5ec8, #ff5ec8, #ff5ec8);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container form{
+    position: absolute;
+    inset: 5px;
+    background: #010144;
+    padding: 50px 40px;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.container form h2{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.input-box{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.input-box input{
+    position: relative;
+    width: 100px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #222;
+    font-size: 16px;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: 0.5s;
+}
+.input-box span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: 0.5s;
+}
+.input-box input:valid ~ span,
+.input-box input:focus ~ span{
+    color: #fff;
+    font-size: 17px;
+    transform: translateY(-34px);
+}
+.input-box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:valid~i,
+.input-box input:focus~i{
+    height: 44px;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.links a{
+    color: #ececec;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+.links a:hover{
+    color: #fff;
+}
+.btn{
+    width: 40%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn:active{
+    opacity: 0.8;
+}
